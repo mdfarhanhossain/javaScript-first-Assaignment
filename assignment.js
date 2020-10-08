@@ -1,3 +1,4 @@
+
 // feetToMile
 
 function feetToMile(feet){
@@ -47,24 +48,20 @@ function woodCalculator(chair=14, table=5, coat=3){
 }
 woodCalculator();
 
+
 // show small name
 
-var karim = 600;
-var rahim = 450;
-var tamim = 750;
-if (karim < rahim){
-    if (karim < tamim){
-        console.log(" karim is smaller ");
-    }
-    else{ 
-        console.log(" tamim is smaller ");
-    }
-}
-    else{
-        if ( rahim < tamim){
-            console.log(" rahim is smaller ");
-        }
-        else{
-            console.log(" tamim is smaller ");
+
+function tinyFriend(name){
+    var smaller = name[0];
+    for(var i=0; i<name.length; i++){
+        var element = name[i];
+        if(element<smaller){
+            smaller=element;
         }
     }
+    return smaller;
+    }
+    var output = tinyFriend(["karim","hasibul","rahmat"]);
+    console.log("small friend :", output);
+    
